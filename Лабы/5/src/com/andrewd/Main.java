@@ -1,5 +1,7 @@
 package com.andrewd;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,8 +15,10 @@ public class Main {
         };
 
         MatrixOperations matrix_op = new MatrixOperations(template);
-        matrix_op.swapColumns(); // swapped 4 and 1 col
+        int[][] formated_matrix = matrix_op.swapColumns(); // swapped 4 and 1 col
 
-        int[][] formated_matrix = matrix_op.toArray();
+        for (int[] row : formated_matrix) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 }
